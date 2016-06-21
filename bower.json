@@ -11,7 +11,8 @@
     "Bootstrap"
   ],
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
+    "angular-route": "^1.5.7",
     "angular": "^1.5.7",
     "bootstrap": "^3.3.6"
   }
