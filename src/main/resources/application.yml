@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: bookish
+    datasource:
+        driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/bookish
+        username: bookish-admin
+        password: password
+
+server:
+    port: 9999
