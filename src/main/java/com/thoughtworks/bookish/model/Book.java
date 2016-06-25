@@ -16,7 +16,11 @@ public class Book {
     private String isbn;
     @Column(name = "published_at")
     private Date publishedAt;
-    //    private String description;
+    private String description;
+
+    public Long getId() {
+        return id;
+    }
 
     public String getAuthor() {
         return author;
@@ -36,5 +40,9 @@ public class Book {
 
     public Date getPublishedAt() {
         return publishedAt;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

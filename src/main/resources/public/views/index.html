@@ -1,16 +1,18 @@
 <div ng-repeat="book in books">
     <div class="col-md-4">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <img class="thumbnailsImage" src="../images/thumbnails/{{book.asin}}.jpg">
-            </div>
-            <div class="panel-footer thumbnailsImageFooter">
+        <a href="#/books/{{book.id}}">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <img class="thumbnailsImage" src="../images/thumbnails/{{book.asin}}.jpg">
+                </div>
+                <div class="panel-footer thumbnailsImageFooter">
                     <div>{{book.title}}</div>
-                <div>
-                    <div class="col-md-8">{{book.author}}</div>
-                    <div class="col-md-4">{{book.publishedAt}}</div>
+                    <div>
+                        <div class="col-md-8">{{book.author}}</div>
+                        <div class="col-md-4">{{book.publishedAt}}</div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>
