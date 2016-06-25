@@ -7,7 +7,8 @@ angular
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'views/index.html'
+                templateUrl: 'views/index.html',
+                controller: 'bookController'
             })
             .otherwise({
                 redirectTo: '/'
