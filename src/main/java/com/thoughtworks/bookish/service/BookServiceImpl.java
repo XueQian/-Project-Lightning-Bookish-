@@ -3,10 +3,10 @@ package com.thoughtworks.bookish.service;
 import com.thoughtworks.bookish.model.Book;
 import com.thoughtworks.bookish.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
 
 @Transactional
 @Service
@@ -17,8 +17,8 @@ public class BookServiceImpl implements BookService {
     BookRepository bookRepository;
 
     @Override
-    public List<Book> getAll() {
-        return (List<Book>) bookRepository.findAll();
+    public Page<Book> getAll(Pageable pageable) {
+        return bookRepository.findAll(pageable);
     }
 
     @Override

@@ -16,3 +16,9 @@
         </a>
     </div>
 </div>
+
+<ul class="pagination">
+    <li ng-repeat="page in getTotalPages()">
+        <a href="javascript:void(0)" ng-click="setPage(page)">{{page}}</a>
+    </li>
+</ul>

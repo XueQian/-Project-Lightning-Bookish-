@@ -1,11 +1,11 @@
 package com.thoughtworks.bookish.service;
 
 import com.thoughtworks.bookish.model.Book;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface BookService {
-    List<Book> getAll();
+    Page<Book> getAll(Pageable pageable);
 
     Book getById(Long id);
 }

@@ -3,13 +3,14 @@
 angular.module('BookishApp')
     .service('BookService', function ($http) {
 
-        this.getBooks = function (callback) {
-            $http.get('/books').success(function (books) {
-                _(books).forEach(function (book) {
-                    formatBookFieldValue(book);
+        this.getBooks = function (page, callback) {
+            $http.get('/books?page=' + page)
+                .success(function (books) {
+                    _(books.content).forEach(function (book) {
+                        formatBookFieldValue(book);
+                    });
+                    callback(books);
                 });
-                callback(books);
-            });
         };
 
         this.getBook = function (id, callback) {
